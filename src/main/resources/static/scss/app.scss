@@ -1,0 +1,63 @@
+@import './colors.scss';
+
+.app-bg {
+  position: fixed;
+  background: #fff;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+nav {
+  &.navbar-fixed-top {
+    border: 0;
+  }
+  &.navbar-app {
+    background: $primary;
+    .navbar-brand {
+      background: #fff;
+      color: $primary !important;
+      font-weight: 700;
+    }
+
+    ul {
+      li {
+        a {
+          color: #fff;
+          font-size: 1.25em;
+          &:hover, &:focus {
+            background: lighten($color: $primary, $amount: 10)
+          }
+        }
+        &.dropdown {
+          &.open {
+            .dropdown-toggle {
+              background: darken($color: $primary, $amount: 10)
+            }
+          }
+          ul.dropdown-menu {
+            background:  lighten($color: $primary, $amount: 10);
+          }
+        }
+      }
+    }
+  }
+}
+
+.panel {
+  &.panel-dashboard-1 {
+    text-align: center;
+    .panel-heading {
+      background: lighten($color: $primary, $amount: 30);
+      color: #444;
+      font-size: 2em;
+      font-weight: 700;
+    }
+    .panel-body {
+      .big {
+        font-size: 5em;
+      }
+    }
+  }
+}

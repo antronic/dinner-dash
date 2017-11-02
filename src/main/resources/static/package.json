@@ -4,5 +4,8 @@
   "description": "Just install node dependencies",
   "main": "index.js",
   "author": "Jirachai Chansivanon <antronic.inc@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "shelljs": "^0.7.8"
+  }
 }

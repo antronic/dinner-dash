@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700');
+@import './colors.scss';
+
+html, body {
+  font-family: 'Roboto Condensed', sans-serif !important;
+}
+
+.web-title {
+  font-weight: 700 !important;
+}
+
+.custom-input {
+  outline: 0 !important;
+  width: 100%;
+  -webkit-appearance: none;
+  border: 2px solid $black !important;
+  border-radius: 6px;
+  padding: .45em .5em !important;
+  font-size: 1.25em;
+}
+
+button {
+  &.btn-j {
+    outline: 0;
+    -webkit-appearance: none !important;
+    border: 0;
+    border-radius: 6px;
+    border: 2px solid $primary !important;
+    padding: .45em 1.75em !important;
+    font-size: 1.25em;
+  }
+  &.primary {
+    background: $primary;
+    color: #fff;
+    &:hover {
+      background:darken($color: $primary, $amount: 10);
+      color: #fff;
+    }
+    &:active {
+      background: #fff;
+      color: $primary;
+    }
+  }
+}
+

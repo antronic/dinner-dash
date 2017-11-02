@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="/vendor/bootstrap/dist/css/bootstrap.min.css" th:href="@{/vendor/bootstrap/dist/css/bootstrap.min.css}" />
+	<link rel="stylesheet" type="text/css" href="/css/style.css" th:href="@{/css/style.css}"/>
+	<link rel="stylesheet" type="text/css" href="/css/login.css" th:href="@{/css/login.css}"/>
+	<script src="/vendor/jquery/dist/jquery.min.js" th:src="@{/vendor/jquery/dist/jquery.min.js}"
+	type="text/javascript" charset="utf-8"></script>
+	<script src="/vendor/bootstrap/dist/js/bootstrap.min.js" th:src="@{/vendor/bootstrap/dist/js/bootstrap.min.js}" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+
+	<!-- File -> layout/_header.html => flagment => :: => header -->
+	<div th:replace="user/layout/_header :: header">Header Menu</div>
+	<div class="container-fluid">
+		<div layout:fragment="content">
+			<!-- Content on here -->
+		</div>
+		<div th:replace="user/layout/_footer :: footer">Footer Menu</div>
+	</div>
+
+</body>
+</html>

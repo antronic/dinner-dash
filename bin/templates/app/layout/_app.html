@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="/vendor/bootstrap/dist/css/bootstrap.min.css" th:href="@{/vendor/bootstrap/dist/css/bootstrap.min.css}" />
+	<link rel="stylesheet" type="text/css" href="/vendor/bootstrap/dist/css/bootstrap.min.css" th:href="@{/vendor/font-awesome/css/font-awesome.min.css}" />
+	<link rel="stylesheet" type="text/css" href="/css/style.css" th:href="@{/css/style.css}"/>
+	<link rel="stylesheet" type="text/css" href="/css/app.css" th:href="@{/css/app.css}"/>
+	<script src="/vendor/jquery/dist/jquery.min.js" th:src="@{/vendor/jquery/dist/jquery.min.js}"
+	type="text/javascript" charset="utf-8"></script>
+	<script src="/vendor/bootstrap/dist/js/bootstrap.min.js" th:src="@{/vendor/bootstrap/dist/js/bootstrap.min.js}" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+
+	<div class="app-bg">
+		
+		<!-- File -> layout/_header.html => flagment => :: => header -->
+		<div th:replace="app/layout/_header :: header">Header Menu</div>
+		<div class="container-fluid" style="margin-top: 4.5em;">
+			<div layout:fragment="content">
+				<!-- Content on here -->
+			</div>
+			<div th:replace="user/layout/_footer :: footer">Footer Menu</div>
+		</div>
+		
+	</div>
+
+</body>
+</html>
