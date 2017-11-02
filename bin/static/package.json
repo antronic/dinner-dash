@@ -1,0 +1,8 @@
+{
+  "name": "static",
+  "version": "1.0.0",
+  "description": "Just install node dependencies",
+  "main": "index.js",
+  "author": "Jirachai Chansivanon <antronic.inc@gmail.com>",
+  "license": "MIT"
+}
