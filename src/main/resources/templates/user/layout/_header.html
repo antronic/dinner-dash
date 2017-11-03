@@ -8,5 +8,9 @@ xmlns:th="http://www.thymeleaf.org" >
 <body>
 	<!-- Code on here -->
 	<!-- th:fragment="header" -->
+	<div th:fragment="header">
+		<a href="/user/register" class="btn-j btn-login-reg" th:if="${isLoginPage}">Register</a>
+		<a href="/user/login" class="btn-j btn-login-reg" th:if="${isRegisterPage}">Login</a>
+	</div>
 </body>
 </html>
