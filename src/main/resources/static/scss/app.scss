@@ -3,6 +3,7 @@
 .app-bg {
   position: fixed;
   background: #fff;
+  overflow-y: scroll;
   top: 0;
   left: 0;
   right: 0;
@@ -46,8 +47,89 @@ nav {
 }
 
 .panel {
-  &.panel-dashboard-1 {
-    text-align: center;
+  text-align: center;
+  // box-shadow: 0px 0px 10px 0px rgba(0,0,0, .15);
+  border: 0;
+  &.panel-dashboard {
+    &.max-height-175 {
+      max-height: 175px;
+      overflow-y: scroll;
+      &.panel-dashboard-cloud {
+        border: 2px solid #999;
+      }
+    }
+    &.panel-dashboard-red {
+      .panel-body {
+        .description {
+          &.fa {
+            background: darken($color: $primary, $amount: 10);
+          }
+        }
+        background: $primary;
+        color: #fff;
+      }
+    }
+    &.panel-dashboard-yellow {
+      .panel-body {
+        .description {
+          &.fa {
+            background: darken($color: #e3b154, $amount: 10);
+          }
+        }
+        background: #e3b154;
+        color: #fff;
+      }
+    }
+    &.panel-dashboard-green {
+      .panel-body {
+        .description {
+          &.fa {
+            background: darken($color: #54e378, $amount: 10);
+          }
+        }
+        background: #54e378;
+        color: #fff;
+      }
+    }
+    &.panel-dashboard-blue {
+      .panel-body {
+        .description {
+          &.fa {
+            background: darken($color: #549ee3, $amount: 10);
+          }
+        }
+        background: #549ee3;
+        color: #fff;
+      }
+    }
+    &.panel-dashboard-cloud {
+      .panel-body {
+        .description {
+          &.fa {
+            background: darken($color: #e0e0e0, $amount: 10);
+          }
+        }
+        background: #e0e0e0;
+        color: rgb(54, 54, 54);
+      }
+    }
+    .icon-box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 10em;
+    }
+    .description {
+      &.fa {
+        font-size: 4.5em;
+        border-radius: 50%;
+        line-height: 2em;
+        width: 2em;
+        height: 2em;
+      }
+      font-size: 2em;
+      margin: 0;
+    }
     .panel-heading {
       background: lighten($color: $primary, $amount: 30);
       color: #444;
@@ -55,8 +137,10 @@ nav {
       font-weight: 700;
     }
     .panel-body {
+      background: #f5f5f5;
       .big {
         font-size: 5em;
+        margin: 0;
       }
     }
   }
